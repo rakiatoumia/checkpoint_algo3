@@ -1,4 +1,4 @@
-FUNCTION function_name(parameters) : FLOAT
+FUNCTION dot_product(var V1: ARRAY_OF FLOAT[10],var V2: ARRAY_OF FLOAT[10] ) : FLOAT
 VAR
  ps:FLOAT:=0;
  i:INTEGER:=0;
