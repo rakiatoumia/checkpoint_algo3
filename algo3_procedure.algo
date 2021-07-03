@@ -1,0 +1,50 @@
+PROCEDURE dot_product(var V1: ARRAY_OF FLOAT[10],var V2: ARRAY_OF FLOAT[10] )
+
+VAR 
+ps:FLOAT:=0;
+i:INTEGER:=0;
+j:INTEGER:=0;
+
+BEGIN
+FOR i FROM 0 TO V1.length-1 STEP 1  DO
+  FOR j FROM 0 TO V2.length-1 STEP 1  DO
+    ps:=ps +V1[i]*V2[j];
+  END_FOR
+END_FOR
+
+IF (ps=0) THEN
+  write("les deux vecteurs sont orthogonaux")
+ELSE
+write ("les deux vecteurs ne sont pas orthogonaux")  
+END_IF
+END
+
+ALGORITHM Dot product
+VAR 
+
+n:INTEGER;
+V1: ARRAY_OF FLOAT[10];
+V2: ARRAY_OF FLOAT[10];
+i:INTEGER:=1;
+j:INTEGER:=0;
+
+BEGIN
+/*nombre des pairs des vecteurs*/
+DO
+{
+read(n);
+}WHILE(n>0);
+
+
+FOR i FROM 1 TO n STEP 1  DO
+/* entree des vecteurs */
+FOR j FROM 0 TO V1.length-1 STEP 1  DO
+  read (V1[j]);
+  read (V2[j]);
+END_FOR
+
+/*tester si les vecteurs sont orthogonaux ou nn */
+dot_product(V1,V2);
+END_FOR
+
+END
